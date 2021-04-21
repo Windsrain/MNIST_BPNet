@@ -1,0 +1,41 @@
+﻿  main.cpp
+d:\data\mnist\mnist\mnist\mnist_reader_common.hpp(41): warning C4244: “初始化”: 从“std::streamoff”转换到“unsigned int”，可能丢失数据
+d:\data\mnist\mnist\mnist\matrix.hpp(34): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(35): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(42): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(43): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(50): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(57): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(97): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(98): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(113): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(114): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(124): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(142): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(143): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(153): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(154): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(164): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(165): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(175): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(177): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(197): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(198): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(206): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(219): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(230): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(231): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(242): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(243): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(244): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(254): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(255): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(265): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(266): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(276): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(277): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(286): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(287): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(297): warning C4018: “<”: 有符号/无符号不匹配
+d:\data\mnist\mnist\mnist\matrix.hpp(298): warning C4018: “<”: 有符号/无符号不匹配
+  MNIST.vcxproj -> D:\Data\MNIST\MNIST\Debug\MNIST.exe
