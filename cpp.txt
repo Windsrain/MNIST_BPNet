@@ -1,0 +1,6 @@
+11:28:22 testing accuracy after iteration 0: 26.85%
+11:33:48 testing accuracy after iteration 100: 67.40%
+11:39:17 testing accuracy after iteration 200: 87.49%
+11:44:49 testing accuracy after iteration 300: 91.38%
+11:50:11 testing accuracy after iteration 400: 92.54%
+11:55:36 testing accuracy after iteration 500: 93.62%

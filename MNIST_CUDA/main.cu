@@ -5,7 +5,7 @@
 
 int trainLen = 60000;
 int testLen = 10000;
-int cnt;
+int cnt, loss;
 const int batch = 200;
 double epsilon = 0.001;
 double regLambda = 0.00;
@@ -17,6 +17,7 @@ Matrix X_train, Y_train, X_test, Y_test;
 
 void generate();
 void predict();
+void calLoss();
 void forwardPropagation();
 void backPropagation();
 void trainModel(int numPasses, bool printLoss);
@@ -114,6 +115,33 @@ void predict() {
     cudaDeviceSynchronize();
 }
 
+void calLoss() {
+    dim3 blockSize(32, 32);
+	dim3 gridSize(32, 32);   
+    //输入层：Xb，隐藏层：a[0]，a[1]，输出层：a[2]   
+    matDotKernel <<<gridSize, blockSize>>> (Xb, W[0], a[0]);
+    matPlusKernel <<<gridSize, blockSize>>> (a[0], B[0], a[0]);
+    matTanhKernel <<<gridSize, blockSize>>> (a[0]);
+    matDotKernel <<<gridSize, blockSize>>> (a[0], W[1], a[1]);
+    matPlusKernel <<<gridSize, blockSize>>> (a[1], B[1], a[1]);
+    matTanhKernel <<<gridSize, blockSize>>> (a[1]);
+    matDotKernel <<<gridSize, blockSize>>> (a[1], W[2], a[2]);
+    matPlusKernel <<<gridSize, blockSize>>> (a[2], B[2], a[2]);
+    cudaDeviceSynchronize();
+    for (int i = 0; i < a[2]->height; i++) {
+        int maxIndex = 0; 
+        double maxValue = a[2]->elements[i * a[2]->width];
+        for (int j = 0; j < a[2]->width; j++)
+            if (a[2]->elements[i * a[2]->width + j] > maxValue) {
+                maxIndex = j;
+                maxValue = a[2]->elements[i * a[2]->width + j];
+            }
+        if (Yb->elements[i * a[2]->width + maxIndex])
+            loss++;
+    }
+    cudaDeviceSynchronize();
+}
+
 void forwardPropagation() {
     dim3 blockSize(32, 32);
 	dim3 gridSize(32, 32);        
@@ -198,5 +226,17 @@ void trainModel(int numPasses, bool printLoss) {
             p = localtime(&t);
             printf("%02d:%02d:%02d testing accuracy after iteration %d: %.2lf%%\n", p->tm_hour, p->tm_min, p->tm_sec, i, accuracy * 100);
         }
+
+        // 经过一个完成的测试集，输出train loss
+        if (printLoss && (j == 0) && (i != 0)) {
+            double accuracy = (loss * 1.0 / X_train.height);
+            struct tm *p;
+            time_t t = time(0);
+            p = localtime(&t);
+            printf("\n%02d:%02d:%02d train loss after iteration %d: %.2lf%%\n\n", p->tm_hour, p->tm_min, p->tm_sec, i, accuracy * 100);
+            loss = 0;
+        }
+
+        calLoss();
     }
 }
